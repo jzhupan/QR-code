@@ -1,9 +1,10 @@
-$backgroundColor: rgb(228, 240, 253);
-$primary-color: rgb(0, 0, 61);
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+$backgroundColor: hsl(212, 45%, 89%);
+$primary-color: hsl(218, 44%, 22%);
+$secondary-color: hsl(220, 15%, 55%);
 $border-radius: 10px;
-$primaryFont: "Archivo Black", sans-serif;
-$secondaryFont: "Urbanist", sans-serif;
-$box-shadow: 0 15px 20px -5px rgb(214, 214, 214);
+$primaryFont: "Outfit", sans-serif;
+$box-shadow: 0 10px 25px -15px hsl(220, 15%, 55%);
 
 body {
   background-image: url("./assets/bg-img.jpg");
@@ -21,6 +22,11 @@ body {
 }
 
 div {
+  .container {
+    min-width: 375px;
+    min-height: auto;
+  }
+
   .qr-code {
     width: 250px;
     height: 400px;
@@ -34,23 +40,25 @@ div {
     box-shadow: $box-shadow;
   }
   img {
-    margin-top: 5%;
+    margin: 5% auto;
     width: 220px;
     height: 220px;
     border-radius: $border-radius;
   }
   .text-box {
-    width: 200px;
+    width: 85%;
     margin: auto;
   }
-  h5 {
+  h3 {
     font-family: $primaryFont;
-    font-size: 14px;
-    text-justify: center;
+    font-size: 17px;
     color: $primary-color;
+
+    margin: auto;
   }
   p {
-    font-family: $secondaryFont;
+    font-family: $primaryFont;
+    color: $secondary-color;
     font-size: 13px;
   }
 }
